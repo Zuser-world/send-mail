@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "send-mail-27938": {
+      "hosting": {
+        "send-mail": [
+          "send-mail-27938"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "send-mail-27938"
+  }
+}
