@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { Router } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -14,10 +14,13 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { DashboardModule } from './components/dashboard/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,12 @@ import { ToastrModule } from 'ngx-toastr';
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    ReactiveFormsModule, 
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule,
+    DashboardModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

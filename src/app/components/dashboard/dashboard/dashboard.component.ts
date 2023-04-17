@@ -6,9 +6,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  ngOnInit(): void {
-    this.toastr.success("funciona", "Sucess!!!")
-  }
+  ngOnInit(): void {}
   constructor (
     private toastr: ToastrService
   ) {}
