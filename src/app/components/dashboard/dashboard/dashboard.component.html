@@ -9,11 +9,11 @@
                 <a class="nav-link active" aria-current="page" routerLink="/dashboard">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/dashboard/users">Send Email</a>
+                <a class="nav-link" routerLink="/dashboard/send-mail">Send Email</a>
               </li>
             </ul>
             <div class="d-flex" role="search">
-                <button class="btn btn-outline-light" type="submit" >Logout</button>
+                <button class="btn btn-outline-light" type="submit" (click)="logOut()">Logout</button>
             </div>
           </div>
         </div>
