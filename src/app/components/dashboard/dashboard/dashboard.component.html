@@ -1,59 +1,85 @@
-
 <body>
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/dashboard">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/dashboard/send-mail">Send Email</a>
-              </li>
-            </ul>
-            <div class="d-flex" role="search">
-                <button class="btn btn-outline-light" type="submit" (click)="logOut()">Logout</button>
-            </div>
-          </div>
-        </div>
-        
-    </nav>
-    <div class="container mb-5 mt-5">
-
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <h2 class="accordion-header" id="headingOne">
-                    Información
-                </h2>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div  class="col">
-                      <div class="card h-100">
-                        <div class="card-body" style="background-color: rgba(52, 52, 52, 0.177)" >
-                                    <p><strong>Correo:</strong> example@example.com</p>
-                                    <p><strong>Name:</strong> name</p>
-                                    <p><strong>Edad:</strong> 12</p>
-                                    <div class="d-grid gap-2">
-                                        <a class="btn btn-secondary" type="button"  download="imagen.jpg"><strong>Editar</strong></a>
-                                    </div>
-                        </div>
-                      </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" routerLink="/dashboard">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/dashboard/send-mail">Send Email</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex" role="search">
+                        <button class="btn btn-outline-light" type="submit" (click)="logOut()">Logout</button>
                     </div>
-                  </div>
-              </div>
+                </div>
             </div>
-          </div>
-      </div>
+
+        </nav>
+        <div class="container mb-5 mt-5">
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h2 class="accordion-header" id="headingOne">
+                                Información
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <div class="card-body" style="background-color: rgba(52, 52, 52, 0.177)">
+                                            <p><strong>Correo:</strong> example@example.com</p>
+                                            <p><strong>Name:</strong> name</p>
+                                            <p><strong>Edad:</strong> 12</p>
+                                            <div class="d-grid gap-2">
+                                                <a class="btn btn-secondary" type="button" download="imagen.jpg"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#updateModal"><strong>Editar</strong></a>
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="updateModal" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar usuario</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p><strong>Correo:</strong> example@example.com</p>
+                                                        <p><strong>Name:</strong> name</p>
+                                                        <p><strong>Edad:</strong> 12</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                        <button type="button" class="btn btn-primary">Guardar cambios</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
