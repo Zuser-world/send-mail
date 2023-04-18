@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DashboardGuard implements CanActivate {
-  statePath : boolean = false;
+  statePath : boolean = true;
   constructor (
     private toastr: ToastrService,
     private router: Router,
